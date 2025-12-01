@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: const HomeScreen(),
         routes: {
-          '/': (context) => const HomeScreen(),
           '/cart': (context) => const CartScreen(),
           '/checkout': (context) => const CheckoutScreen(),
           '/order-confirmation': (context) =>
