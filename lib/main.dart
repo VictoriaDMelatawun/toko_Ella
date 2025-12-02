@@ -26,7 +26,11 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
-        ),
+          textTheme: const TextTheme(
+            bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+          ),
         debugShowCheckedModeBanner: false,
         home: const HomeScreen(),
         routes: {
