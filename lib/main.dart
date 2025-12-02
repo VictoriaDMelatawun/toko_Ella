@@ -32,6 +32,18 @@ class MyApp extends StatelessWidget {
             ),
           ),
         debugShowCheckedModeBanner: false,
+        onGenerateRoute: (settings) {
+          switch (settings.name) {
+            case '/cart':
+              return PageRouteBuilder(
+                pageBuilder: (_, __, ___) => const CartScreen(),
+                transitionsBuilder: (_, anim, __, child) =>
+                    FadeTransition(opacity: anim, child: child),
+              );
+            default:
+              return null;
+          }
+        },
         home: const HomeScreen(),
         routes: {
           '/cart': (context) => const CartScreen(),
